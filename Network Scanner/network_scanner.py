@@ -1,4 +1,5 @@
 import scapy.all as scapy
+import optparse
 
 # Algorithm:
 # 1. Create ARP Request directed to broadcast MAC asking for IP.
