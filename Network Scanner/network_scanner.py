@@ -1,5 +1,5 @@
 import scapy.all as scapy
-import optparse
+import argparse
 
 # Algorithm:
 # 1. Create ARP Request directed to broadcast MAC asking for IP.
@@ -30,9 +30,9 @@ def netscan(ip):
     return client_list
     
 def get_args():
-    parser = optparse.OptionParser()
-    parser.add_option("-t","--target",dest="target",help="Enter Target IP Address/Range")
-    (options,arguements) = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t","--target",dest="target",help="Enter Target IP Address/Range")
+    options = parser.parse_args()
     return options
 
 #Driver Code
